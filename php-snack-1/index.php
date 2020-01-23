@@ -10,7 +10,7 @@ Se tutto è ok, stampare “Accesso riuscito”, altrimenti “Accesso negato”
 $name = $_GET['name'];
 //estraggo al sua lunghezza
 $name_lenght = mb_strlen($name);
-if ($name_lenght < 3) {
+if ($name_lenght <= 3) {
     echo 'il nome deve contenere almeno 3 lettere..accesso negato';
 } else {
     //se il nome è corretto procede con la verifica della mail
