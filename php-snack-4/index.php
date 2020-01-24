@@ -13,13 +13,11 @@ $phrase = explode(".", $long_text);
 // var_dump($phrase);
 // echo '</pre>';
 
-//primo modo mi spuntano 8 frasi
-// foreach ($phrase as $key => $value) {
-//     echo '<p>Frase '.$key.':'.$value.'</p>';
-// }
-
-//secondo modo
-for ($i=0; $i < (count($phrase)-1); $i++) {
-    echo '<p>Frase '.$i.':'.$phrase[$i].'</p>';
+//elimino l'ultima frase che sarebbe una stringa vuota e inserisco il punto che era esploso
+foreach ($phrase as $key => $value) {
+    if ($value !== ' ') {
+        echo '<p>Frase '.$key.':'.$value.'.</p>';
+    }
 }
+
  ?>
